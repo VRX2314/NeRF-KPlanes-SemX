@@ -3,12 +3,12 @@ import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 
-from backbones.nerf import NerfModel
+from backbones.kplanes import NerfModel
 from render import render_rays
 
 
 @torch.no_grad()
-def test(hn, hf, dataset, chunk_size=10, img_index=0, nb_bins=192, H=400, W=400):
+def test(hn, hf, dataset, chunk_size=1, img_index=0, nb_bins=192, H=400, W=400):
     ray_origins = dataset[img_index * H * W : (img_index + 1) * H * W, :3]
     ray_directions = dataset[img_index * H * W : (img_index + 1) * H * W, 3:6]
 
@@ -40,7 +40,7 @@ def test(hn, hf, dataset, chunk_size=10, img_index=0, nb_bins=192, H=400, W=400)
 if __name__ == "__main__":
 
     device = torch.device("mps")
-    model = torch.load("./models/nerf_model_plex_6.pth", map_location=device)
+    model = torch.load("./models/kplanes_model_15.pth", map_location=device)
 
     testing_dataset = torch.from_numpy(
         np.load("./data/testing_data.pkl", allow_pickle=True)
