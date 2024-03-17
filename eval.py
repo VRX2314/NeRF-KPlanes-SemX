@@ -2,6 +2,7 @@ import torch
 import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+import pandas as pd
 
 from skimage.metrics import (
     peak_signal_noise_ratio,
@@ -15,7 +16,22 @@ from render import render_rays
 
 
 @torch.no_grad()
-def eval(hn, hf, dataset, chunk_size=10, img_index=0, nb_bins=192, H=400, W=400):
+def eval(
+    hn,
+    hf,
+    dataset,
+    chunk_size=10,
+    img_index=0,
+    nb_bins=192,
+    H=400,
+    W=400,
+    save_path="./log.csv",
+):
+
+    mse_log = []
+    psnr_log = []
+    ssim_log = []
+
     ray_origins = dataset[img_index * H * W : (img_index + 1) * H * W, :3]
     ray_directions = dataset[img_index * H * W : (img_index + 1) * H * W, 3:6]
     target = dataset[img_index * H * W : (img_index + 1) * H * W, 6:]
@@ -55,6 +71,10 @@ def eval(hn, hf, dataset, chunk_size=10, img_index=0, nb_bins=192, H=400, W=400)
 
     plt.savefig(f"./metric_inferences/{img_index}.png", bbox_inches="tight")
 
+    log = {"psnr": psnr_log, "mse": mse_log, "ssim": ssim_log}
+    log = pd.DataFrame(log)
+    log.to_csv(save_path)
+
 
 if __name__ == "__main__":
 
@@ -66,4 +86,13 @@ if __name__ == "__main__":
     )
 
     for img_index in range(200):
-        eval(2, 6, testing_dataset, img_index=img_index, nb_bins=192, H=400, W=400)
+        eval(
+            2,
+            6,
+            testing_dataset,
+            img_index=img_index,
+            nb_bins=192,
+            H=400,
+            W=400,
+            save_path="./metric_inferences/log_name.csv",
+        )
