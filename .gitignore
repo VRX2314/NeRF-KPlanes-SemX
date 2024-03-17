@@ -2,3 +2,4 @@ data
 data_raw
 .DS_Store
 models
+*.png
