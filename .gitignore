@@ -12,3 +12,5 @@ data_raw
 *.mp4
 *.mov
 *.mtl
+*.docx
+temp_*
