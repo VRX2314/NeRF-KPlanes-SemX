@@ -1,5 +1,14 @@
-data
-data_raw
+*.npy
+*.zip
 .DS_Store
-models
 *.png
+*.jpg
+*.obj
+*.pth
+*.ply
+data_raw
+*.pkl
+*.gif
+*.mp4
+*.mov
+*.mtl
