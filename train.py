@@ -64,6 +64,7 @@ if __name__ == "__main__":
 
     dataloader = DataLoader(training_dataset, batch_size=1024, shuffle=True)
 
+    # hn, hf - near point far point
     train(
         model,
         optimizer,

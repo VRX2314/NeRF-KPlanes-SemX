@@ -12,6 +12,7 @@ def compute_accumulated_transmittance(alphas):
     )
 
 
+# Ray Tracing
 def render_rays(nerf_model, ray_origins, ray_directions, hn=0, hf=0.5, nb_bins=192):
     device = ray_origins.device
     t = torch.linspace(hn, hf, nb_bins, device=device).expand(
