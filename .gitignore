@@ -6,7 +6,6 @@
 *.ply
 data_raw
 *.pkl
-*.gif
 *.mp4
 *.mov
 *.mtl
