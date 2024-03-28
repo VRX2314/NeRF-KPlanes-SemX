@@ -1,8 +1,6 @@
 *.npy
 *.zip
 .DS_Store
-*.png
-*.jpg
 *.obj
 *.pth
 *.ply
@@ -14,3 +12,7 @@ data_raw
 *.mtl
 *.docx
 temp_*
+inferences
+metric_inferences
+demo
+meshes
