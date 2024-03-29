@@ -1,22 +1,29 @@
 # NeRF-KPlanes-SemX
 
- An implementation and explanantion of NeRF and K-Planes in PyTorch. This repository contains the code for NeRF and K-Planes for my Semester X Neural Networks and Deep Learning Project. It is based on the implementation of Maxime Vandegar (Papers in 100 lines of code).
+ An implementation and explanantion of NeRF and K-Planes in PyTorch. This repository contains the code for NeRF and K-Planes for my Semester X Neural Networks and Deep Learning Project. A **report** has also been generated explaining in detail the models implemented, the metrics and dataset used and the libraries and open-source software leveraged. It is based on the implementation of **Maxime Vandegar** [(@Papers in 100 Lines of Code).](https://github.com/MaximeVandegar/Papers-in-100-Lines-of-Code/tree/main/NeRF_Representing_Scenes_as_Neural_Radiance_Fields_for_View_Synthesis)
 
-**Refer to full_pipe.ipynb for the complete pipeline and outputs of the project.**
+**[Notebook Explaing Full Pipeline](./full_pipe.ipynb)**
+**[Report](./report/)**
 
-**Report availabe in the report directory**
-
-# ⚠️ README File WIP
+⚠️ Gifs may Fail to Render, All assets available in [img](./img/) directory.
 
 ## High Fidelity Outputs (Using NeRFStudio)
 
-**Animations made using Blender**
+Animations made using Blender
 
 | Guitar  | Shoe | Model Car|
 | -------- | ------- | ------- |
 | ![Preview](./img/Guitar.gif "Preview") | ![Preview](./img/Shoe.gif "Preview") |  ![Preview](./img/Car.gif "Preview") |
 
+[NeRF Studio Instructions](https://docs.nerf.studio/quickstart/first_nerf.html)
+
 ## Models Implemented
+
+### NeRF Model
+
+### K-Planes Model
+
+Refer to [Report](./report/) for detailed explanation.
 
 ## Results
 
