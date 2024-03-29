@@ -4,7 +4,7 @@
 
 | Input Data  | Pre-Processing (Colmap Based) | Output |
 | -------- | ------- | ------- |
-| ![Preview](./img/feature_grid.png "Preview") | ![Preview](./img/Colmap_OP.gif "Preview") |  ![Preview](./img/Car.gif "Preview") |
+| ![Preview](./img/feature_grid.jpg "Preview") | ![Preview](./img/Colmap_OP.gif "Preview") |  ![Preview](./img/Car.gif "Preview") |
 
 **[Notebook Explaing Full Pipeline](./full_pipe.ipynb)**
 
